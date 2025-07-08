@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Chef Pepu - Token Rakyat</title>
+  <style>
+    body {
+      background-color: #fffbe6;
+      font-family: 'Segoe UI', sans-serif;
+      text-align: center;
+      padding: 40px;
+      color: #333;
+    }
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+    h1 {
+      color: #d4af37;
+      font-size: 2.5em;
+      margin-bottom: 10px;
+    }
+    h2 {
+      color: #444;
+      font-size: 1.3em;
+      margin-bottom: 30px;
+    }
+    .info {
+      background: #fff2b8;
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .info p {
+      font-size: 1.1em;
+      margin: 10px 0;
+    }
+    .footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: #888;
+    }
+    img.logo {
+      width: 150px;
+      border-radius: 50%;
+      margin-bottom: 20px;
+      border: 4px solid #d4af37;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <img src="https://i.ibb.co/9qWL9fB/chefpepu-gold.png" alt="Chef Pepu" class="logo">
+    <h1>Chef PEPU</h1>
+    <h2>"Token Rakyat yang Siap Masak di Blockchain!"</h2>
+    <div class="info">
+      <p><strong>Presale:</strong> 28 Juli 2025</p>
+      <p><strong>Total Supply:</strong> 99,900,000 CHEF</p>
+      <p><strong>Blockchain:</strong> Ethereum</p>
+      <p><strong>Token Tipe:</strong> Meme + Utility</p>
+    </div>
+    <div class="footer">
+      &copy; 2025 ChefPepu. Dibuat dengan hati & rasa peduli.
+    </div>
+  </div>
+</body>
+</html>
