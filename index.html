@@ -1,6 +1,5 @@
-    
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -64,7 +63,7 @@
     }
     section {
       padding: 2rem 1rem;
-      max-width: 800px;
+      max-width: 900px;
       margin: 0 auto;
     }
     .tokenomics {
@@ -81,6 +80,10 @@
       width: 160px;
       text-align: center;
       box-shadow: 0 2px 8px #eee;
+    }
+    form input, form button {
+      font-family: inherit;
+      font-size: 1rem;
     }
     footer {
       background: #333;
@@ -106,7 +109,7 @@
     <img src="https://romadhoni1802.github.io/chefpepu-website/chef-pepu.png" alt="ChefPEPU Mascot" />
     <h2>“Token Rakyat yang Siap Masak di Blockchain!”</h2>
     <div class="buttons">
-      <a href="#">🍛 Join Presale</a>
+      <a href="#presale">🍛 Join Presale</a>
       <a href="#">📊 View Chart</a>
       <a href="#">🎁 Claim Airdrop</a>
     </div>
@@ -134,11 +137,7 @@
     <h2>👨‍🍳 Tim & Misi ChefPEPU</h2>
     <p>
       ChefPEPU bukan sekadar token — ini adalah gerakan dari dapur rakyat untuk membawa rasa lokal ke dunia global. 
-      Didirikan oleh <strong>ROMADHONI</strong>, anak warung sederhana yang tumbuh besar di tengah wajan panas dan resep warisan ibu.
-    </p>
-    <p>
-      Berbekal semangat dan pengalaman dari dapur kecil, ChefPEPU hadir untuk menyuarakan transparansi, kejujuran, dan cita rasa Indonesia di dunia blockchain.
-      Bukan hanya soal crypto, tapi soal nilai: kerja keras, kepercayaan, dan berbagi untuk semua.
+      Didirikan oleh <strong>Rauma Doni</strong>, anak warung sederhana yang tumbuh besar di tengah wajan panas dan resep warisan ibu.
     </p>
     <p>
       <strong>Misi ChefPEPU:</strong>
@@ -152,11 +151,50 @@
     </p>
     <p style="margin-top:2rem;"><strong>Tim ChefPEPU:</strong></p>
     <div class="tokenomics">
-      <div>👑<br><strong>ROMADHONI</strong><br>Founder & Visionary</div>
-      <div>🎨<br><strong>NASGOR BUHAJI WARU</strong><br>Desain & Visual Branding</div>
-      <div>💻<br><strong>COMUNITAS BLOCHAIN</strong><br>Smart Contract Developer</div>
+      <div>👑<br><strong>Rauma Doni</strong><br>Founder & Visionary</div>
+      <div>🎨<br><strong>SambalSketch</strong><br>Desain & Visual Branding</div>
+      <div>💻<br><strong>CodeSoto</strong><br>Smart Contract Developer</div>
       <div>📢<br><strong>RasaRakyat</strong><br>Community Outreach</div>
     </div>
+  </section>
+
+  <section id="presale">
+    <h2 style="text-align:center;">🔥 Presale Bertahap ChefPEPU</h2>
+    <p style="text-align:center;">Dapatkan PEPU termurah hanya di fase awal! Presale dimulai dalam:</p>
+    <div id="countdown" style="font-size:2rem;text-align:center;margin:1rem 0;color:darkred;"></div>
+
+    <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:2rem;">
+      <div style="background:#fff8cc;border:2px dashed gold;padding:1rem;border-radius:12px;width:220px;">
+        <strong>Fase 1</strong><br>1 BNB = <strong>1.500.000 PEPU</strong><br>Status: <span style="color:green;">Aktif ✅</span>
+      </div>
+      <div style="background:#fff8cc;border:2px dashed gold;padding:1rem;border-radius:12px;width:220px;">
+        <strong>Fase 2</strong><br>1 BNB = <strong>1.250.000 PEPU</strong><br>Status: <span style="color:gray;">Belum Dibuka</span>
+      </div>
+      <div style="background:#fff8cc;border:2px dashed gold;padding:1rem;border-radius:12px;width:220px;">
+        <strong>Fase 3</strong><br>1 BNB = <strong>1.000.000 PEPU</strong><br>Status: <span style="color:gray;">Belum Dibuka</span>
+      </div>
+    </div>
+
+    <h3 style="text-align:center;">🚀 Progress Dana Terkumpul</h3>
+    <div style="width:80%;max-width:500px;margin:0 auto;background:#eee;border-radius:20px;overflow:hidden;">
+      <div style="width:35%;background:gold;height:20px;text-align:center;color:#000;font-weight:bold;">
+        35%
+      </div>
+    </div>
+    <p style="text-align:center;font-size:0.9rem;">12 BNB dari target 35 BNB</p>
+
+    <h3 style="text-align:center;margin-top:2rem;">🍛 Join Presale Sekarang!</h3>
+    <form style="max-width:500px;margin:0 auto;text-align:left;">
+      <label>Nama:</label><br>
+      <input type="text" name="name" placeholder="Nama lengkap" style="width:100%;padding:10px;border-radius:8px;margin-bottom:1rem;"><br>
+      
+      <label>Alamat Wallet BSC:</label><br>
+      <input type="text" name="wallet" placeholder="0x..." style="width:100%;padding:10px;border-radius:8px;margin-bottom:1rem;"><br>
+      
+      <button type="submit" style="background:gold;color:#000;padding:1rem 2rem;border:none;border-radius:10px;font-size:1rem;">
+        🚀 Kirim Data Presale
+      </button>
+    </form>
   </section>
 
   <footer>
@@ -168,5 +206,28 @@
       <a href="#">👨‍💻 GitHub</a>
     </p>
   </footer>
+
+  <script>
+    const countdown = () => {
+      const target = new Date("2025-07-28T00:00:00").getTime();
+      const now = new Date().getTime();
+      const diff = target - now;
+
+      if (diff <= 0) {
+        document.getElementById("countdown").innerHTML = "Presale Sudah Dimulai! 🚀";
+        return;
+      }
+
+      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+      const secs = Math.floor((diff % (1000 * 60)) / 1000);
+
+      document.getElementById("countdown").innerHTML = `${days}h ${hours}j ${mins}m ${secs}s`;
+      setTimeout(countdown, 1000);
+    };
+    countdown();
+  </script>
 </body>
 </html>
+      
