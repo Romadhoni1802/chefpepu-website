@@ -122,20 +122,22 @@
       Dari wajan ke wallet — kita goreng bareng! 🔥
     </p>
   </section>
+
   <section>
     <h2>👨‍🍳 Tim & Misi ChefPEPU</h2>
     <p>
-      ChefPEPU bukan sekadar token — ini adalah gerakan dari dapur rakyat untuk membawa rasa lokal ke dunia global. anak warung sederhana yang tumbuh besar di tengah wajan panas dan resep warisan ibu.
+      ChefPEPU bukan sekadar token — ini adalah gerakan dari dapur rakyat untuk membawa rasa lokal ke dunia global. 
+      Didirikan oleh <strong>ROMADHONI</strong>, anak warung sederhana yang tumbuh besar di tengah wajan panas dan resep warisan ibu.
     </p>
     <p>
-      Berbekal semangat dan pengalaman dari dapur kecil, ChefPEPU hadir untuk menyuarakan transparansi, kejujuran, dan cita rasa Indonesia di dunia blockchain. Bukan hanya soal crypto, tapi soal nilai: kerja keras, kepercayaan, dan berbagi untuk semua.
-      Didirikan oleh <strong>Romadhoni</strong>,token ini lahir dari semangat perjuangan rakyat dan rasa cinta terhadap teknologi.
+      Berbekal semangat dan pengalaman dari dapur kecil, ChefPEPU hadir untuk menyuarakan transparansi, kejujuran, dan cita rasa Indonesia di dunia blockchain. 
+      Bukan hanya soal crypto, tapi soal nilai: kerja keras, kepercayaan, dan berbagi untuk semua.
     </p>
     <p>
       <strong>Misi ChefPEPU:</strong>
       <ul style="text-align:left; max-width:600px; margin:1rem auto;">
         <li>✅ Membangun ekosistem yang jujur dan anti-scam</li>
-        <li>🍛 Mempromosikan budaya kuliner Indonesia melalui teknologi</li>
+        <li>🍜 Mempromosikan budaya kuliner Indonesia melalui teknologi</li>
         <li>🔥 Mendukung UMKM dan warung kecil naik kelas lewat Web3</li>
         <li>🎁 Memberi manfaat nyata untuk komunitas melalui airdrop dan reward</li>
         <li>🚀 Membuka kolaborasi NFT, mini-game, dan edukasi blockchain</li>
@@ -193,6 +195,26 @@
   </section>
 
   <section>
+    <h2 style="text-align:center;">🔐 Alamat Wallet Presale Resmi</h2>
+    <p style="text-align:center;">Silakan kirim BNB ke alamat di bawah ini untuk ikut serta dalam presale ChefPEPU:</p>
+    <div style="text-align:center;margin:1.5rem 0;">
+      <input 
+        id="walletAddress" 
+        type="text" 
+        value="0x753c18121d41ccb3e6c928520060f5febf4141e9" 
+        readonly 
+        style="width:300px;padding:10px;font-size:1rem;border-radius:10px;text-align:center;border:2px solid gold;background:#fff8cc;color:#333;"
+      />
+      <br>
+      <button 
+        onclick="copyWallet()" 
+        style="margin-top:1rem;padding:10px 20px;border:none;border-radius:10px;background:gold;color:#000;font-weight:bold;cursor:pointer;box-shadow:0 4px 10px #ccc;">
+        📋 Salin Alamat Wallet
+      </button>
+    </div>
+  </section>
+
+  <section>
     <h2 style="text-align:center;">💰 Tokenomics</h2>
     <div class="tokenomics">
       <div>🥄<br><strong>40%</strong><br>Presale</div>
@@ -229,6 +251,14 @@
       setTimeout(countdown, 1000);
     };
     countdown();
+
+    function copyWallet() {
+      const walletInput = document.getElementById("walletAddress");
+      walletInput.select();
+      walletInput.setSelectionRange(0, 99999); // Untuk mobile
+      document.execCommand("copy");
+      alert("Alamat wallet disalin ke clipboard!");
+    }
   </script>
 </body>
 </html>
