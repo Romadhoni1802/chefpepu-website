@@ -1,9 +1,9 @@
 <!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>ChefPEPU - Token Rakyat</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
@@ -30,12 +30,14 @@
     .hero {
       text-align: center;
       padding: 3rem 1rem;
+      animation: fadeIn 1s ease-in-out;
     }
     .hero img {
       width: 200px;
       border-radius: 20px;
       border: 5px solid gold;
       box-shadow: 0 0 30px gold;
+      animation: pulse 2s infinite;
     }
     .hero h2 {
       font-size: 2rem;
@@ -65,62 +67,21 @@
       max-width: 800px;
       margin: 0 auto;
     }
-    .tokenomics, .team {
+    .tokenomics-row {
       display: flex;
+      justify-content: space-between;
       flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
+      gap: 10px;
     }
-    .tokenomics div, .team div {
+    .tokenomics-row div {
+      flex: 1;
+      min-width: 100px;
       background: #fff8cc;
       border: 2px dashed gold;
       padding: 1rem;
       border-radius: 12px;
-      width: 160px;
       text-align: center;
       box-shadow: 0 2px 8px #eee;
-    }
-    .presale-phases {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .presale-phases div {
-      background: #fff9cc;
-      border: 2px solid gold;
-      border-radius: 10px;
-      padding: 1rem;
-      text-align: center;
-      box-shadow: 0 4px 10px #ffc;
-    }
-    form {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    input[type="text"], input[type="email"] {
-      padding: 0.75rem;
-      border: 2px solid gold;
-      border-radius: 10px;
-      font-size: 1rem;
-    }
-    button[type="submit"] {
-      padding: 0.75rem;
-      background: linear-gradient(45deg, #ffcc00, gold);
-      border: none;
-      border-radius: 10px;
-      color: #000;
-      font-size: 1rem;
-      font-weight: bold;
-      cursor: pointer;
-      box-shadow: 0 4px 10px #ffeb3b;
-      transition: 0.3s;
-    }
-    button[type="submit"]:hover {
-      transform: scale(1.05);
-      background: linear-gradient(45deg, gold, #ffcc00);
     }
     footer {
       background: #333;
@@ -134,6 +95,15 @@
       margin: 0 0.5rem;
       text-decoration: none;
     }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(-20px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes pulse {
+      0% {box-shadow: 0 0 30px gold;}
+      50% {box-shadow: 0 0 40px #ffc107;}
+      100% {box-shadow: 0 0 30px gold;}
+    }
   </style>
 </head>
 <body>
@@ -144,71 +114,45 @@
     <img src="https://romadhoni1802.github.io/chefpepu-website/chef-pepu.png" alt="ChefPEPU Mascot" />
     <h2>“Token Rakyat yang Siap Masak di Blockchain!”</h2>
     <div class="buttons">
-      <a href="#form">🍛 Join Presale</a>
-      <a href="#chart">📊 View Chart</a>
-      <a href="#airdrop">🎁 Claim Airdrop</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0nigK5SfMIYpW5Ue_3DWD74g-uc4AxguP1Q7bW5WdOXmjGQ/viewform?usp=dialog">🍛 Join Presale</a>
+      <a href="#">📊 View Chart</a>
+      <a href="#">🎁 Claim Airdrop</a>
     </div>
   </div>  <section>
-    <h2 style="text-align:center;">Tentang ChefPEPU</h2>
-    <p style="text-align:center;">
-      ChefPEPU lahir dari dapur legendaris kampung. Bukan sekadar nasi goreng, ini revolusi blockchain!  
-      Dari wajan ke wallet — kita goreng bareng! 🔥
-    </p>
-  </section>  <section>
-    <h2 style="text-align:center;">⏳ Countdown Presale</h2>
-    <div id="countdown" style="font-size:2rem; text-align:center; margin-top:1rem; color:#d4af37; font-weight:bold;"></div>
-  </section>  <section id="form">
-    <h2 style="text-align:center;">🚀 Join Presale</h2>
-    <form>
-      <input type="text" placeholder="Nama Lengkap" required>
-      <input type="email" placeholder="Email" required>
-      <input type="text" placeholder="Alamat Wallet (0x...)" required>
-      <button type="submit">Kirim</button>
-    </form>
-  </section>  <section>
-    <h2 style="text-align:center;">📈 5 Fase Presale</h2>
-    <div class="presale-phases">
-      <div><strong>Fase 1</strong><br>Harga: 0.0005 BNB</div>
-      <div><strong>Fase 2</strong><br>Harga: 0.0008 BNB</div>
-      <div><strong>Fase 3</strong><br>Harga: 0.001 BNB</div>
-      <div><strong>Fase 4</strong><br>Harga: 0.0012 BNB</div>
-      <div><strong>Fase 5</strong><br>Harga: 0.0015 BNB</div>
-    </div>
-  </section>  <section>
     <h2 style="text-align:center;">👨‍🍳 Tim & Misi ChefPEPU</h2>
     <p>
-      ChefPEPU bukan sekadar token — ini adalah gerakan dari dapur rakyat untuk membawa rasa lokal ke dunia global. 
+      ChefPEPU bukan sekadar token — ini adalah gerakan dari dapur rakyat untuk membawa rasa lokal ke dunia global.
       Didirikan oleh <strong>ROMADHONI</strong>, anak warung sederhana yang tumbuh besar di tengah wajan panas dan resep warisan ibu.
     </p>
     <p>
-      Berbekal semangat dan pengalaman dari dapur kecil, ChefPEPU hadir untuk menyuarakan transparansi, kejujuran, dan cita rasa Indonesia di dunia blockchain.
-      Bukan hanya soal crypto, tapi soal nilai: kerja keras, kepercayaan, dan berbagi untuk semua.
+      Berbekal semangat dan pengalaman dari dapur kecil, ChefPEPU hadir untuk menyuarakan transparansi, kejujuran,
+      dan cita rasa Indonesia di dunia blockchain. Bukan hanya soal crypto, tapi soal nilai: kerja keras,
+      kepercayaan, dan berbagi untuk semua.
     </p>
-    <p>
-      <strong>Misi ChefPEPU:</strong>
-      <ul style="text-align:left; max-width:600px; margin:1rem auto;">
-        <li>✅ Membangun ekosistem yang jujur dan anti-scam</li>
-        <li>🍛 Mempromosikan budaya kuliner Indonesia melalui teknologi</li>
-        <li>🔥 Mendukung UMKM dan warung kecil naik kelas lewat Web3</li>
-        <li>🎁 Memberi manfaat nyata untuk komunitas melalui airdrop dan reward</li>
-        <li>🚀 Membuka kolaborasi NFT, mini-game, dan edukasi blockchain</li>
-      </ul>
-    </p>
-    <p style="margin-top:2rem;"><strong>Tim ChefPEPU:</strong></p>
-    <div class="team">
-      <div>👑<br><strong>ROMADHONI</strong><br>Founder & Visionary</div>
-      <div>🎨<br><strong>NASGOR BUHAJI</strong><br>Desain & Visual Branding</div>
-      <div>💻<br><strong>Comunity blochain</strong><br>Smart Contract Developer</div>
-      <div>📢<br><strong>RasaRakyat</strong><br>Community Outreach</div>
-    </div>
-  </section>  <section id="tokenomics">
-    <h2 style="text-align:center;">💰 Tokenomics</h2>
-    <div class="tokenomics">
+    <ul>
+      <li>✅ Membangun ekosistem yang jujur dan anti-scam</li>
+      <li>🍜 Mempromosikan budaya kuliner Indonesia melalui teknologi</li>
+      <li>🔥 Mendukung UMKM dan warung kecil naik kelas lewat Web3</li>
+      <li>🎁 Memberi manfaat nyata untuk komunitas melalui airdrop dan reward</li>
+      <li>🚀 Membuka kolaborasi NFT, mini-game, dan edukasi blockchain</li>
+    </ul>
+  </section>  <section>
+    <h2 style="text-align:center;">📈 Tokenomics</h2>
+    <div class="tokenomics-row">
       <div>🥄<br><strong>40%</strong><br>Presale</div>
       <div>🍳<br><strong>30%</strong><br>Liquidity</div>
       <div>🎉<br><strong>20%</strong><br>Airdrop</div>
       <div>👨‍🍳<br><strong>10%</strong><br>Team</div>
     </div>
+  </section>  <section>
+    <h2 style="text-align:center;">🗺️ Roadmap ChefPEPU</h2>
+    <ul>
+      <li>✅ Fase 1: Riset pasar dan pembangunan komunitas awal</li>
+      <li>🚀 Fase 2: Launching token & presale via BNB</li>
+      <li>🔥 Fase 3: Listing di DEX & integrasi dengan platform kuliner</li>
+      <li>🎁 Fase 4: Airdrop massal + peluncuran program edukasi blockchain</li>
+      <li>🌎 Fase 5: Kolaborasi NFT, mini-game dan ekspansi global</li>
+    </ul>
   </section>  <footer>
     <p>© 2025 ChefPEPU</p>
     <p>
@@ -217,22 +161,7 @@
       <a href="#">📹 TikTok</a> | 
       <a href="#">👨‍💻 GitHub</a>
     </p>
-  </footer>  <script>
-    const countdown = document.getElementById("countdown");
-    const targetDate = new Date("July 28, 2025 20:00:00").getTime();
-    const x = setInterval(() => {
-      const now = new Date().getTime();
-      const distance = targetDate - now;
-      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
-      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
-      if (distance < 0) {
-        clearInterval(x);
-        countdown.innerHTML = "Presale Telah Selesai";
-      }
-    }, 1000);
-  </script></body>
+  </footer>
+</body>
 </html>
       
