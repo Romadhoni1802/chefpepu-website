@@ -1,4 +1,197 @@
-<!DOCTYPE html>
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChefPEPU - Token Rakyat</title>
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Fredoka One', cursive;
+      background: linear-gradient(135deg, #fffbe6, #fdf5b3);
+      color: #333;
+    }
+    header {
+      background: linear-gradient(to right, #ffd700, gold, #f5b700);
+      text-align: center;
+      padding: 4rem 1rem;
+      color: #fff;
+      box-shadow: 0 4px 10px #c9a500;
+      position: relative;
+    }
+    .language {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .language select {
+      padding: 0.5rem 1rem;
+      font-size: 1rem;
+      border-radius: 10px;
+      border: 2px solid gold;
+    }
+    header img {
+      width: 200px;
+      border-radius: 50%;
+      border: 5px solid white;
+      box-shadow: 0 0 20px gold;
+    }
+    header h1 {
+      font-size: 3rem;
+      margin: 1rem 0 0.5rem;
+    }
+    header p {
+      font-size: 1.3rem;
+      margin: 0 0 2rem;
+    }
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+    .cta-buttons a {
+      text-decoration: none;
+      padding: 1rem 2rem;
+      background: linear-gradient(45deg, gold, #ffcc00);
+      color: #000;
+      font-size: 1.1rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px #f5d000;
+      transition: all 0.3s ease;
+    }
+    .cta-buttons a:hover {
+      transform: scale(1.05);
+      background: linear-gradient(45deg, #ffcc00, gold);
+    }
+    section {
+      padding: 3rem 1rem;
+      max-width: 900px;
+      margin: 0 auto;
+      text-align: center;
+    }
+    .tokenomics {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .tokenomics div {
+      background: #fff8cc;
+      border: 2px dashed gold;
+      padding: 1rem;
+      border-radius: 12px;
+      width: 160px;
+      box-shadow: 0 2px 8px #eee;
+    }
+    .countdown {
+      font-size: 2rem;
+      color: #b28900;
+      margin-top: 1rem;
+    }
+    footer {
+      background: #333;
+      color: white;
+      text-align: center;
+      padding: 1.5rem 1rem;
+      margin-top: 3rem;
+    }
+    footer a {
+      color: gold;
+      margin: 0 0.5rem;
+      text-decoration: none;
+    }
+    input[type="email"] {
+      padding: 0.5rem;
+      border-radius: 8px;
+      border: 2px solid gold;
+      width: 250px;
+      margin-right: 0.5rem;
+    }
+    button {
+      padding: 0.5rem 1rem;
+      border: none;
+      border-radius: 8px;
+      background: gold;
+      color: #000;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="language">
+      <select onchange="window.location.href=this.value">
+        <option selected disabled>🌐 Pilih Bahasa</option>
+        <option value="index.html">🇮🇩 Indonesia</option>
+        <option value="en.html">🇺🇸 English</option>
+        <option value="jp.html">🇯🇵 日本語</option>
+        <option value="cn.html">🇨🇳 中文</option>
+        <option value="ru.html">🇷🇺 Русский</option>
+        <option value="hi.html">🇮🇳 हिंदी</option>
+        <option value="es.html">🇪🇸 Español</option>
+        <option value="it.html">🇮🇹 Italiano</option>
+      </select>
+    </div>
+    <img src="https://romadhoni1802.github.io/chefpepu-website/chef-pepu.png" alt="ChefPEPU" />
+    <h1>Chef PEPU</h1>
+    <p>Token Rakyat dari Warung ke Blockchain 🚀</p>
+    <div class="cta-buttons">
+      <a href="#">🍛 Join Presale</a>
+      <a href="#">📊 View Chart</a>
+      <a href="#">🎁 Claim Airdrop</a>
+    </div>
+  </header>  <section>
+    <h2>Tentang ChefPEPU</h2>
+    <p>
+      ChefPEPU bukan sekadar meme token — ini revolusi dari dapur kampung ke dunia blockchain!
+      Bumbu legendaris kini hadir di dunia digital.
+    </p>
+  </section>  <section>
+    <h2>🍳 Tokenomics</h2>
+    <div class="tokenomics">
+      <div>🥄<br><strong>40%</strong><br>Presale</div>
+      <div>🍳<br><strong>30%</strong><br>Liquidity</div>
+      <div>🎉<br><strong>20%</strong><br>Airdrop</div>
+      <div>👨‍🍳<br><strong>10%</strong><br>Team</div>
+    </div>
+  </section>  <section>
+    <h2>⏳ Countdown Presale</h2>
+    <div class="countdown" id="countdown"></div>
+  </section>  <section>
+    <h2>🎁 Daftar Airdrop</h2>
+    <p>Masukkan email atau wallet address kamu untuk daftar whitelist:</p>
+    <form>
+      <input type="email" placeholder="Email atau Wallet" required />
+      <button type="submit">Daftar</button>
+    </form>
+  </section>  <footer>
+    <p>© 2025 ChefPEPU</p>
+    <p>
+      <a href="#">🐦 Twitter</a> | 
+      <a href="#">📣 Telegram</a> | 
+      <a href="#">📹 TikTok</a> | 
+      <a href="#">👨‍💻 GitHub</a>
+    </p>
+  </footer>  <script>
+    const targetDate = new Date("2025-07-28T00:00:00").getTime();
+    const countdown = document.getElementById("countdown");
+    setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+      if (distance < 0) {
+        countdown.innerHTML = "Presale Dimulai!";
+        return;
+      }
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdown.innerHTML = `${days}h ${hours}j ${minutes}m ${seconds}d`;
+    }, 1000);
+  </script></body>
+</html><!DOCTYPE html>
 <html lang="id">
 <head>
   <meta charset="UTF-8" />
