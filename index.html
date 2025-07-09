@@ -1,5 +1,4 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
@@ -63,16 +62,16 @@
     }
     section {
       padding: 2rem 1rem;
-      max-width: 900px;
+      max-width: 800px;
       margin: 0 auto;
     }
-    .tokenomics {
+    .tokenomics, .team {
       display: flex;
       flex-wrap: wrap;
       gap: 1rem;
       justify-content: center;
     }
-    .tokenomics div {
+    .tokenomics div, .team div {
       background: #fff8cc;
       border: 2px dashed gold;
       padding: 1rem;
@@ -81,9 +80,47 @@
       text-align: center;
       box-shadow: 0 2px 8px #eee;
     }
-    form input, form button {
-      font-family: inherit;
+    .presale-phases {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .presale-phases div {
+      background: #fff9cc;
+      border: 2px solid gold;
+      border-radius: 10px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 4px 10px #ffc;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    input[type="text"], input[type="email"] {
+      padding: 0.75rem;
+      border: 2px solid gold;
+      border-radius: 10px;
       font-size: 1rem;
+    }
+    button[type="submit"] {
+      padding: 0.75rem;
+      background: linear-gradient(45deg, #ffcc00, gold);
+      border: none;
+      border-radius: 10px;
+      color: #000;
+      font-size: 1rem;
+      font-weight: bold;
+      cursor: pointer;
+      box-shadow: 0 4px 10px #ffeb3b;
+      transition: 0.3s;
+    }
+    button[type="submit"]:hover {
+      transform: scale(1.05);
+      background: linear-gradient(45deg, gold, #ffcc00);
     }
     footer {
       background: #333;
@@ -103,41 +140,49 @@
   <header>
     <h1>👨‍🍳 Chef PEPU</h1>
     <p>Token Rakyat dari Warung ke Blockchain 🚀</p>
-  </header>
-
-  <div class="hero">
+  </header>  <div class="hero">
     <img src="https://romadhoni1802.github.io/chefpepu-website/chef-pepu.png" alt="ChefPEPU Mascot" />
     <h2>“Token Rakyat yang Siap Masak di Blockchain!”</h2>
     <div class="buttons">
-      <a href="#presale">🍛 Join Presale</a>
-      <a href="#">📊 View Chart</a>
-      <a href="#">🎁 Claim Airdrop</a>
+      <a href="#form">🍛 Join Presale</a>
+      <a href="#chart">📊 View Chart</a>
+      <a href="#airdrop">🎁 Claim Airdrop</a>
     </div>
-  </div>
-
-  <section>
+  </div>  <section>
     <h2 style="text-align:center;">Tentang ChefPEPU</h2>
     <p style="text-align:center;">
       ChefPEPU lahir dari dapur legendaris kampung. Bukan sekadar nasi goreng, ini revolusi blockchain!  
       Dari wajan ke wallet — kita goreng bareng! 🔥
     </p>
-  </section>
-
-  <section>
-    <h2 style="text-align:center;">🍳 Tokenomics</h2>
-    <div class="tokenomics">
-      <div>🥄<br><strong>40%</strong><br>Presale</div>
-      <div>🍳<br><strong>30%</strong><br>Liquidity</div>
-      <div>🎉<br><strong>20%</strong><br>Airdrop</div>
-      <div>👨‍🍳<br><strong>10%</strong><br>Team</div>
+  </section>  <section>
+    <h2 style="text-align:center;">⏳ Countdown Presale</h2>
+    <div id="countdown" style="font-size:2rem; text-align:center; margin-top:1rem; color:#d4af37; font-weight:bold;"></div>
+  </section>  <section id="form">
+    <h2 style="text-align:center;">🚀 Join Presale</h2>
+    <form>
+      <input type="text" placeholder="Nama Lengkap" required>
+      <input type="email" placeholder="Email" required>
+      <input type="text" placeholder="Alamat Wallet (0x...)" required>
+      <button type="submit">Kirim</button>
+    </form>
+  </section>  <section>
+    <h2 style="text-align:center;">📈 5 Fase Presale</h2>
+    <div class="presale-phases">
+      <div><strong>Fase 1</strong><br>Harga: 0.0005 BNB</div>
+      <div><strong>Fase 2</strong><br>Harga: 0.0008 BNB</div>
+      <div><strong>Fase 3</strong><br>Harga: 0.001 BNB</div>
+      <div><strong>Fase 4</strong><br>Harga: 0.0012 BNB</div>
+      <div><strong>Fase 5</strong><br>Harga: 0.0015 BNB</div>
     </div>
-  </section>
-
-  <section>
-    <h2>👨‍🍳 Tim & Misi ChefPEPU</h2>
+  </section>  <section>
+    <h2 style="text-align:center;">👨‍🍳 Tim & Misi ChefPEPU</h2>
     <p>
       ChefPEPU bukan sekadar token — ini adalah gerakan dari dapur rakyat untuk membawa rasa lokal ke dunia global. 
-      Didirikan oleh <strong>Rauma Doni</strong>, anak warung sederhana yang tumbuh besar di tengah wajan panas dan resep warisan ibu.
+      Didirikan oleh <strong>ROMADHONI</strong>, anak warung sederhana yang tumbuh besar di tengah wajan panas dan resep warisan ibu.
+    </p>
+    <p>
+      Berbekal semangat dan pengalaman dari dapur kecil, ChefPEPU hadir untuk menyuarakan transparansi, kejujuran, dan cita rasa Indonesia di dunia blockchain.
+      Bukan hanya soal crypto, tapi soal nilai: kerja keras, kepercayaan, dan berbagi untuk semua.
     </p>
     <p>
       <strong>Misi ChefPEPU:</strong>
@@ -150,54 +195,21 @@
       </ul>
     </p>
     <p style="margin-top:2rem;"><strong>Tim ChefPEPU:</strong></p>
-    <div class="tokenomics">
-      <div>👑<br><strong>Rauma Doni</strong><br>Founder & Visionary</div>
-      <div>🎨<br><strong>SambalSketch</strong><br>Desain & Visual Branding</div>
-      <div>💻<br><strong>CodeSoto</strong><br>Smart Contract Developer</div>
+    <div class="team">
+      <div>👑<br><strong>ROMADHONI</strong><br>Founder & Visionary</div>
+      <div>🎨<br><strong>NASGOR BUHAJI</strong><br>Desain & Visual Branding</div>
+      <div>💻<br><strong>Comunity blochain</strong><br>Smart Contract Developer</div>
       <div>📢<br><strong>RasaRakyat</strong><br>Community Outreach</div>
     </div>
-  </section>
-
-  <section id="presale">
-    <h2 style="text-align:center;">🔥 Presale Bertahap ChefPEPU</h2>
-    <p style="text-align:center;">Dapatkan PEPU termurah hanya di fase awal! Presale dimulai dalam:</p>
-    <div id="countdown" style="font-size:2rem;text-align:center;margin:1rem 0;color:darkred;"></div>
-
-    <div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin-bottom:2rem;">
-      <div style="background:#fff8cc;border:2px dashed gold;padding:1rem;border-radius:12px;width:220px;">
-        <strong>Fase 1</strong><br>1 BNB = <strong>1.500.000 PEPU</strong><br>Status: <span style="color:green;">Aktif ✅</span>
-      </div>
-      <div style="background:#fff8cc;border:2px dashed gold;padding:1rem;border-radius:12px;width:220px;">
-        <strong>Fase 2</strong><br>1 BNB = <strong>1.250.000 PEPU</strong><br>Status: <span style="color:gray;">Belum Dibuka</span>
-      </div>
-      <div style="background:#fff8cc;border:2px dashed gold;padding:1rem;border-radius:12px;width:220px;">
-        <strong>Fase 3</strong><br>1 BNB = <strong>1.000.000 PEPU</strong><br>Status: <span style="color:gray;">Belum Dibuka</span>
-      </div>
+  </section>  <section id="tokenomics">
+    <h2 style="text-align:center;">💰 Tokenomics</h2>
+    <div class="tokenomics">
+      <div>🥄<br><strong>40%</strong><br>Presale</div>
+      <div>🍳<br><strong>30%</strong><br>Liquidity</div>
+      <div>🎉<br><strong>20%</strong><br>Airdrop</div>
+      <div>👨‍🍳<br><strong>10%</strong><br>Team</div>
     </div>
-
-    <h3 style="text-align:center;">🚀 Progress Dana Terkumpul</h3>
-    <div style="width:80%;max-width:500px;margin:0 auto;background:#eee;border-radius:20px;overflow:hidden;">
-      <div style="width:35%;background:gold;height:20px;text-align:center;color:#000;font-weight:bold;">
-        35%
-      </div>
-    </div>
-    <p style="text-align:center;font-size:0.9rem;">12 BNB dari target 35 BNB</p>
-
-    <h3 style="text-align:center;margin-top:2rem;">🍛 Join Presale Sekarang!</h3>
-    <form style="max-width:500px;margin:0 auto;text-align:left;">
-      <label>Nama:</label><br>
-      <input type="text" name="name" placeholder="Nama lengkap" style="width:100%;padding:10px;border-radius:8px;margin-bottom:1rem;"><br>
-      
-      <label>Alamat Wallet BSC:</label><br>
-      <input type="text" name="wallet" placeholder="0x..." style="width:100%;padding:10px;border-radius:8px;margin-bottom:1rem;"><br>
-      
-      <button type="submit" style="background:gold;color:#000;padding:1rem 2rem;border:none;border-radius:10px;font-size:1rem;">
-        🚀 Kirim Data Presale
-      </button>
-    </form>
-  </section>
-
-  <footer>
+  </section>  <footer>
     <p>© 2025 ChefPEPU</p>
     <p>
       <a href="#">🐦 Twitter</a> | 
@@ -205,29 +217,22 @@
       <a href="#">📹 TikTok</a> | 
       <a href="#">👨‍💻 GitHub</a>
     </p>
-  </footer>
-
-  <script>
-    const countdown = () => {
-      const target = new Date("2025-07-28T00:00:00").getTime();
+  </footer>  <script>
+    const countdown = document.getElementById("countdown");
+    const targetDate = new Date("July 28, 2025 20:00:00").getTime();
+    const x = setInterval(() => {
       const now = new Date().getTime();
-      const diff = target - now;
-
-      if (diff <= 0) {
-        document.getElementById("countdown").innerHTML = "Presale Sudah Dimulai! 🚀";
-        return;
+      const distance = targetDate - now;
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+      if (distance < 0) {
+        clearInterval(x);
+        countdown.innerHTML = "Presale Telah Selesai";
       }
-
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const secs = Math.floor((diff % (1000 * 60)) / 1000);
-
-      document.getElementById("countdown").innerHTML = `${days}h ${hours}j ${mins}m ${secs}s`;
-      setTimeout(countdown, 1000);
-    };
-    countdown();
-  </script>
-</body>
+    }, 1000);
+  </script></body>
 </html>
       
