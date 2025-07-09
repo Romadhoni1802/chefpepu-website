@@ -30,14 +30,12 @@
     .hero {
       text-align: center;
       padding: 3rem 1rem;
-      animation: fadeIn 1s ease-in-out;
     }
     .hero img {
       width: 200px;
       border-radius: 20px;
       border: 5px solid gold;
       box-shadow: 0 0 30px gold;
-      animation: pulse 2s infinite;
     }
     .hero h2 {
       font-size: 2rem;
@@ -69,19 +67,16 @@
     }
     .tokenomics-row {
       display: flex;
-      justify-content: space-between;
+      justify-content: space-around;
       flex-wrap: wrap;
-      gap: 10px;
+      margin: 2rem auto;
     }
-    .tokenomics-row div {
-      flex: 1;
-      min-width: 100px;
-      background: #fff8cc;
-      border: 2px dashed gold;
-      padding: 1rem;
-      border-radius: 12px;
+    .tokenomics-item {
       text-align: center;
-      box-shadow: 0 2px 8px #eee;
+      margin: 1rem;
+    }
+    .tokenomics-item span {
+      font-size: 2rem;
     }
     footer {
       background: #333;
@@ -95,15 +90,6 @@
       margin: 0 0.5rem;
       text-decoration: none;
     }
-    @keyframes fadeIn {
-      from {opacity: 0; transform: translateY(-20px);}
-      to {opacity: 1; transform: translateY(0);}
-    }
-    @keyframes pulse {
-      0% {box-shadow: 0 0 30px gold;}
-      50% {box-shadow: 0 0 40px #ffc107;}
-      100% {box-shadow: 0 0 30px gold;}
-    }
   </style>
 </head>
 <body>
@@ -114,21 +100,22 @@
     <img src="https://romadhoni1802.github.io/chefpepu-website/chef-pepu.png" alt="ChefPEPU Mascot" />
     <h2>“Token Rakyat yang Siap Masak di Blockchain!”</h2>
     <div class="buttons">
-      <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0nigK5SfMIYpW5Ue_3DWD74g-uc4AxguP1Q7bW5WdOXmjGQ/viewform?usp=dialog">🍛 Join Presale</a>
-      <a href="#">📊 View Chart</a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0nigK5SfMIYpW5Ue_3DWD74g-uc4AxguP1Q7bW5WdOXmjGQ/viewform">🍛 Join Presale</a>
+      <a href="#">📊 Lihat Chart</a>
       <a href="#">🎁 Claim Airdrop</a>
     </div>
   </div>  <section>
+    <h2 style="text-align:center;">🍳 Tokenomics</h2>
+    <div class="tokenomics-row">
+      <div class="tokenomics-item">🥄<br><strong>40%</strong><br>Presale</div>
+      <div class="tokenomics-item">🍳<br><strong>30%</strong><br>Liquidity</div>
+      <div class="tokenomics-item">🎉<br><strong>20%</strong><br>Airdrop</div>
+      <div class="tokenomics-item">👨‍🍳<br><strong>10%</strong><br>Tim</div>
+    </div>
+  </section>  <section>
     <h2 style="text-align:center;">👨‍🍳 Tim & Misi ChefPEPU</h2>
-    <p>
-      ChefPEPU bukan sekadar token — ini adalah gerakan dari dapur rakyat untuk membawa rasa lokal ke dunia global.
-      Didirikan oleh <strong>ROMADHONI</strong>, anak warung sederhana yang tumbuh besar di tengah wajan panas dan resep warisan ibu.
-    </p>
-    <p>
-      Berbekal semangat dan pengalaman dari dapur kecil, ChefPEPU hadir untuk menyuarakan transparansi, kejujuran,
-      dan cita rasa Indonesia di dunia blockchain. Bukan hanya soal crypto, tapi soal nilai: kerja keras,
-      kepercayaan, dan berbagi untuk semua.
-    </p>
+    <p>ChefPEPU bukan sekadar token — ini adalah gerakan dari dapur rakyat untuk membawa rasa lokal ke dunia global. Didirikan oleh <strong>ROMADHONI</strong>, anak warung sederhana yang tumbuh besar di tengah wajan panas dan resep warisan ibu.</p>
+    <p>Berbekal semangat dan pengalaman dari dapur kecil, ChefPEPU hadir untuk menyuarakan transparansi, kejujuran, dan cita rasa Indonesia di dunia blockchain. Bukan hanya soal crypto, tapi soal nilai: kerja keras, kepercayaan, dan berbagi untuk semua.</p>
     <ul>
       <li>✅ Membangun ekosistem yang jujur dan anti-scam</li>
       <li>🍜 Mempromosikan budaya kuliner Indonesia melalui teknologi</li>
@@ -136,32 +123,50 @@
       <li>🎁 Memberi manfaat nyata untuk komunitas melalui airdrop dan reward</li>
       <li>🚀 Membuka kolaborasi NFT, mini-game, dan edukasi blockchain</li>
     </ul>
-  </section>  <section>
-    <h2 style="text-align:center;">📈 Tokenomics</h2>
+    <p><strong>Tim ChefPEPU:</strong></p>
     <div class="tokenomics-row">
-      <div>🥄<br><strong>40%</strong><br>Presale</div>
-      <div>🍳<br><strong>30%</strong><br>Liquidity</div>
-      <div>🎉<br><strong>20%</strong><br>Airdrop</div>
-      <div>👨‍🍳<br><strong>10%</strong><br>Team</div>
+      <div class="tokenomics-item">👑<br><strong>ROMADHONI</strong><br>Founder - Nasgor BUHAJI</div>
+      <div class="tokenomics-item">🎨<br><strong>VisualTeam</strong><br>Comunity Blockchain</div>
     </div>
   </section>  <section>
-    <h2 style="text-align:center;">🗺️ Roadmap ChefPEPU</h2>
-    <ul>
-      <li>✅ Fase 1: Riset pasar dan pembangunan komunitas awal</li>
-      <li>🚀 Fase 2: Launching token & presale via BNB</li>
-      <li>🔥 Fase 3: Listing di DEX & integrasi dengan platform kuliner</li>
-      <li>🎁 Fase 4: Airdrop massal + peluncuran program edukasi blockchain</li>
-      <li>🌎 Fase 5: Kolaborasi NFT, mini-game dan ekspansi global</li>
-    </ul>
+    <h2 style="text-align:center;">⏳ Countdown Presale</h2>
+    <div id="countdown" style="font-size:2rem; text-align:center; margin-top:1rem; color:#d4af37; font-weight:bold;"></div>
+  </section>  <section>
+    <h2 style="text-align:center;">🚀 Cara Join Presale</h2>
+    <ol style="max-width:700px; margin:1rem auto; font-size:1.1rem; line-height:1.6;">
+      <li>Siapkan wallet (Metamask, Trust Wallet, dll)</li>
+      <li>Gunakan jaringan <strong>BNB Smart Chain</strong></li>
+      <li>Kirim BNB ke alamat resmi ChefPEPU:<br><strong style="background:#fff6cc;padding:0.4rem 0.6rem;border-radius:6px;display:inline-block;">0x395a79b06C1203358B85cAb623Ae99a0D00E2b5c</strong></li>
+      <li>Isi form: <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0nigK5SfMIYpW5Ue_3DWD74g-uc4AxguP1Q7bW5WdOXmjGQ/viewform">Form Join Presale</a></li>
+      <li>Token dikirim otomatis setelah presale berakhir (28 Juli 2025)</li>
+    </ol>
   </section>  <footer>
     <p>© 2025 ChefPEPU</p>
     <p>
-      <a href="#">🐦 Twitter</a> | 
-      <a href="#">📣 Telegram</a> | 
-      <a href="#">📹 TikTok</a> | 
+      <a href="#">🐦 Twitter</a> |
+      <a href="#">📣 Telegram</a> |
+      <a href="#">📹 TikTok</a> |
       <a href="#">👨‍💻 GitHub</a>
     </p>
-  </footer>
-</body>
+  </footer>  <script>
+    const countdown = document.getElementById("countdown");
+    const targetDate = new Date("July 28, 2025 20:00:00").getTime();
+
+    const x = setInterval(() => {
+      const now = new Date().getTime();
+      const distance = targetDate - now;
+
+      const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+      const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+      const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+      const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+      countdown.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+
+      if (distance < 0) {
+        clearInterval(x);
+        countdown.innerHTML = "Presale Telah Selesai";
+      }
+    }, 1000);
+  </script></body>
 </html>
-      
