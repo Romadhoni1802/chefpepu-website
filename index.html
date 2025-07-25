@@ -1,262 +1,350 @@
-<!DOCTYPE html><html lang="id"><head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ChefPEPU - Platform UMKM & Token Berkelanjutan</title>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-  <style>
-    body {
-      font-family: 'Poppins', sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #f7f7f7;
-      color: #333;
-    }header {
-  background: #ff6347;
-  color: white;
-  padding: 1rem 2rem;
-  text-align: center;
-}
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChefPEPU - Gerbang UMKM Indonesia Menuju Pasar Global</title>
+    
+    <!-- Impor Font dari Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@400;500&display=swap" rel="stylesheet">
 
-.hero {
-  padding: 2rem;
-  text-align: center;
-  background: white;
-}
+    <style>
+        /* CSS untuk Desain Mewah */
+        :root {
+            --primary-gold: #D4AF37;
+            --dark-bg: #121212;
+            --card-bg: #1E1E1E;
+            --text-light: #F5F5F5;
+            --text-secondary: #A9A9A9;
+        }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 1rem;
-}
+        html {
+            scroll-behavior: smooth;
+        }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 1rem;
-}
+        body {
+            font-family: 'Roboto', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--dark-bg);
+            color: var(--text-light);
+            line-height: 1.7;
+        }
 
-.cta {
-  background: #ff6347;
-  color: white;
-  padding: 0.8rem 1.5rem;
-  border: none;
-  border-radius: 8px;
-  text-decoration: none;
-  font-weight: bold;
-}
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
 
-.section {
-  padding: 2rem;
-  background: white;
-  margin-top: 1rem;
-}
+        /* Header & Hero Section */
+        header {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1542838132-92c53300491e?q=80&w=1974&auto=format&fit=crop') no-repeat center center/cover;
+            padding: 100px 20px;
+            text-align: center;
+        }
 
-.produk-container {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 1.5rem;
-  justify-content: center;
-}
+        header h1 {
+            font-family: 'Montserrat', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4rem); /* Ukuran font responsif */
+            color: var(--primary-gold);
+            margin: 0;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
 
-.produk {
-  width: 280px;
-  background: #fff;
-  border-radius: 10px;
-  padding: 1rem;
-  text-align: center;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-  transition: transform 0.2s;
-}
+        header p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 20px auto;
+        }
 
-.produk:hover {
-  transform: scale(1.02);
-}
+        .cta-button {
+            display: inline-block;
+            background-color: var(--primary-gold);
+            color: var(--dark-bg);
+            padding: 18px 35px;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 50px; /* Tombol berbentuk pil */
+            margin-top: 20px;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+        }
 
-.produk img {
-  width: 100%;
-  border-radius: 8px;
-}
+        .cta-button:hover {
+            background-color: #fff;
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
 
-.produk h3 {
-  margin-top: 0.5rem;
-}
+        /* Struktur Section */
+        section {
+            padding: 80px 0;
+        }
 
-.produk p {
-  font-size: 0.9rem;
-}
+        section h2 {
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary-gold);
+            margin-bottom: 60px;
+        }
 
-footer {
-  background: #333;
-  color: white;
-  text-align: center;
-  padding: 1rem;
-  margin-top: 2rem;
-}
+        .grid-2, .grid-3 {
+            display: grid;
+            gap: 40px;
+            align-items: center;
+        }
 
-@media (max-width: 600px) {
-  .produk-container {
-    flex-direction: column;
-    align-items: center;
-  }
+        .grid-2 { grid-template-columns: 1fr 1fr; }
+        .grid-3 { grid-template-columns: repeat(3, 1fr); }
 
-  .produk {
-    width: 90%;
-  }
+        /* Card Styling */
+        .card {
+            background-color: var(--card-bg);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            border: 1px solid #333;
+        }
+        
+        .card h3 {
+            color: var(--primary-gold);
+            font-family: 'Montserrat', sans-serif;
+        }
 
-  .hero h1 {
-    font-size: 1.5rem;
-  }
+        /* Bagian Penjualan Global */
+        #penjualan-global img {
+            width: 100%;
+            border-radius: 15px;
+            object-fit: cover;
+            height: 100%;
+        }
 
-  .hero p {
-    font-size: 1rem;
-  }
-}
+        /* Bagian Tentang Kami dengan Logo */
+        #tentang-kami .logo-container {
+            text-align: center;
+        }
+        #tentang-kami img.logo {
+            max-width: 250px;
+            margin-bottom: 20px;
+        }
+        blockquote {
+            border-left: 4px solid var(--primary-gold);
+            padding-left: 20px;
+            margin: 30px 0;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: var(--text-light);
+        }
 
-  </style>
-</head><body>
-  <header>
-    <h1>ChefPEPU</h1>
-    <p>Platform UMKM Berkelanjutan + Token Utility</p>
-  </header>  <section class="hero">
-    <h1>Bantu UMKM, Dapat Reward</h1>
-    <p>ChefPEPU hadir untuk bantu produk lokal dan UMKM naik kelas lewat platform digital dan token utility.</p>
-    <a href="#produk" class="cta">Lihat Produk</a>
-  </section>  <section id="produk" class="section">
-    <h2 style="text-align: center;">Produk Unggulan</h2>
-    <div class="produk-container">
-      <div class="produk">
-        <img src="https://i.imgur.com/8qZwC2Y.jpg" alt="Sambal Warisan Ibu dalam botol modern">
-        <h3>Sambal Warisan Ibu</h3>
-        <p>Rp25.000 - Pedas khas, tanpa bahan pengawet. Laris 1000+ pcs per bulan!</p>
-      </div>
-      <div class="produk">
-        <img src="https://i.imgur.com/QCGiPtv.jpg" alt="Bumbu Nasi Goreng Rempah Kering">
-        <h3>Bumbu Nasi Goreng</h3>
-        <p>Rp15.000 - Bumbu rahasia dari warung legendaris. UMKM siap jual ulang!</p>
-      </div>
-    </div>
-  </section>  <section class="section">
-    <h2 style="text-align: center;">Testimoni</h2>
-    <p style="text-align: center; max-width: 600px; margin: auto;">"Awalnya saya cuma jualan offline, setelah dibantu tim ChefPEPU, sekarang produk saya sudah tembus Shopee & TikTok Shop!" - Bu Narti, Penjual Bumbu</p>
-  </section>  <section class="section">
-    <h2 style="text-align: center;">Tentang Token ChefPEPU</h2>
-    <p style="max-width: 700px; margin: auto;">Token ChefPEPU adalah token utility berbasis komunitas yang digunakan untuk reward, voting pengembangan UMKM, hingga akses layanan premium di platform ChefPEPU. Kami memiliki sistem <strong>liquidity lock</strong>, <strong>vesting terjadwal</strong>, dan <strong>pembagian reward untuk holder</strong>. Fokus kami bukan hanya cuan, tapi memberi manfaat nyata bagi UMKM dan komunitas. Info lengkap akan tersedia di halaman token resmi.</p>
-  </section>  <footer>
-    <p>© 2025 ChefPEPU. Platform untuk UMKM Maju dan Tumbuh Bersama.</p>
-  </footer>
-</body></html>
-    </p>
-    <p>
-      Berbekal semangat dan pengalaman dari dapur kecil, ChefPEPU hadir untuk menyuarakan transparansi, kejujuran, dan cita rasa Indonesia di dunia blockchain. 
-      Bukan hanya soal crypto, tapi soal nilai: kerja keras, kepercayaan, dan berbagi untuk semua.
-    </p>
-    <h3 style="text-align:center;">🎯 Misi ChefPEPU</h3>
-    <ul style="max-width:600px; margin:1rem auto;">
-      <li>✅ Membangun ekosistem yang jujur dan anti-scam</li>
-      <li>🍜 Mempromosikan budaya kuliner Indonesia melalui teknologi</li>
-      <li>🔥 Mendukung UMKM dan warung kecil naik kelas lewat Web3</li>
-      <li>🏱 Memberi manfaat nyata untuk komunitas melalui airdrop dan reward</li>
-      <li>🚀 Membuka kolaborasi NFT, mini-game, dan edukasi blockchain</li>
-    </ul>
-    <h3 style="text-align:center; margin-top:2rem;">👥 Tim ChefPEPU</h3>
-    <div class="tokenomics">
-      <div>👑<br><strong>Romadhoni</strong><br>Founder</div>
-      <div>🎨<br><strong>VisualBumbu</strong><br>Design & Art</div>
-      <div>💻<br><strong>CodeSambal</strong><br>Blockchain Dev</div>
-      <div>📣<br><strong>CommuChain</strong><br>Community Manager</div>
-    </div>
-  </section>  <section>
-    <h2 style="text-align:center;">📍 Roadmap ChefPEPU</h2>
-    <div class="roadmap">
-      <div><strong>Fase 1</strong><br>Launch Website & Token</div>
-      <div><strong>Fase 2</strong><br>Presale Bertahap Dimulai</div>
-      <div><strong>Fase 3</strong><br>Listing DEX + CMC/CG</div>
-      <div><strong>Fase 4</strong><br>Mini Game & NFT Koleksi</div>
-      <div><strong>Fase 5</strong><br>Ekspansi Global & Kemitraan</div>
-    </div>
-  </section>  <section id="presale">
-    <h2 style="text-align:center;">🔥 Presale Bertahap ChefPEPU</h2>
-    <div id="countdown" style="text-align:center; font-size:1.8rem; margin-top:1rem; color:darkred;"></div><div style="display:flex;flex-wrap:wrap;gap:1rem;justify-content:center;margin:2rem 0;">
-  <div style="background:#fff8cc;border:2px dashed gold;padding:1rem;border-radius:12px;width:220px;">
-    <strong>Fase 1</strong><br>1 BNB = <strong>1.500.000 PEPU</strong><br>Total: 20.000.000 PEPU<br>Harga: <strong>Rp 0,004</strong>
-  </div>
-  <div style="background:#fff8cc;border:2px dashed gold;padding:1rem;border-radius:12px;width:220px;">
-    <strong>Fase 2</strong><br>1 BNB = <strong>1.250.000 PEPU</strong><br>Total: 10.000.000 PEPU<br>Harga: <strong>Rp 0,0048</strong>
-  </div>
-  <div style="background:#fff8cc;border:2px dashed gold;padding:1rem;border-radius:12px;width:220px;">
-    <strong>Fase 3</strong><br>1 BNB = <strong>1.000.000 PEPU</strong><br>Total: 15.000.000 PEPU<br>Harga: <strong>Rp 0,006</strong>
-  </div>
-  <div style="background:#fff8cc;border:2px dashed gold;padding:1rem;border-radius:12px;width:220px;">
-    <strong>Fase 4</strong><br>1 BNB = <strong>850.000 PEPU</strong><br>Total: 20.000.000 PEPU<br>Harga: <strong>Rp 0,00705</strong>
-  </div>
-  <div style="background:#fff8cc;border:2px dashed gold;padding:1rem;border-radius:12px;width:220px;">
-    <strong>Fase 5</strong><br>1 BNB = <strong>700.000 PEPU</strong><br>Total: 25.000.000 PEPU<br>Harga: <strong>Rp 0,00857</strong>
-  </div>
-</div>
+        /* BAGIAN VIDEO BARU */
+        #video-visi {
+            padding: 0;
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+        }
+        #video-visi video {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            min-width: 100%;
+            min-height: 100%;
+            width: auto;
+            height: auto;
+            z-index: 0;
+            transform: translateX(-50%) translateY(-50%);
+        }
+        .video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.6);
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 20px;
+        }
+        .video-overlay h2 {
+            margin-bottom: 20px;
+        }
 
-<h3 style="text-align:center;">📊 Grafik Perbandingan Harga PEPU</h3>
-<div style="max-width:500px;margin:2rem auto;">
-  <img src="https://quickchart.io/chart?c={type:'bar',data:{labels:['Fase 1','Fase 2','Fase 3','Fase 4','Fase 5'],datasets:[{label:'Harga (Rp) per PEPU',backgroundColor:'gold',data:[0.004,0.0048,0.006,0.00705,0.00857]}]},options:{scales:{y:{beginAtZero:true}}}}" alt="Grafik Harga PEPU" style="width:100%;border:2px solid gold;border-radius:12px;">
-</div>
+        /* Bagian Testimoni */
+        .testimonial-card {
+            text-align: center;
+        }
+        .testimonial-card img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            border: 3px solid var(--primary-gold);
+            margin-bottom: 20px;
+            object-fit: cover;
+        }
+        .testimonial-card p.quote {
+            font-style: italic;
+            color: var(--text-secondary);
+        }
+        .testimonial-card p.author {
+            font-weight: bold;
+            color: var(--primary-gold);
+            margin-top: 15px;
+        }
 
-<div style="text-align:center;">
-  <a href="https://docs.google.com/forms/d/e/1FAIpQLSe0nigK5SfMIYpW5Ue_3DWD74g-uc4AxguP1Q7bW5WdOXmjGQ/viewform"
-    target="_blank"
-    style="background:linear-gradient(45deg, gold, #ffcc00);padding:1rem 2rem;border-radius:12px;color:#000;font-size:1.2rem;text-decoration:none;box-shadow:0 4px 10px #ccc;">
-    📝 Isi Form Presale Sekarang
-  </a>
-</div>
+        /* Bagian Token */
+        #token-pepu {
+            background-color: var(--card-bg);
+        }
+        .wallet-address {
+            word-wrap: break-word;
+            background-color: var(--dark-bg);
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Courier New', Courier, monospace;
+            text-align: center;
+            font-size: 1.1em;
+            border: 1px dashed var(--primary-gold);
+        }
+        .warning-text {
+            color: #ffcc00;
+            font-weight: bold;
+            text-align: center;
+            display: block;
+            margin-top: 15px;
+        }
 
-  </section>  <section>
-    <h2 style="text-align:center;">🔐 Alamat Wallet Resmi</h2>
-    <p style="text-align:center;">Kirim BNB ke alamat di bawah ini untuk ikut presale:</p>
-    <div style="text-align:center;margin:1.5rem 0;">
-      <input id="walletAddress" type="text" value="0x753c18121d41ccb3e6c928520060f5febf4141e9"
-        readonly style="width:300px;padding:10px;font-size:1rem;border-radius:10px;text-align:center;border:2px solid gold;background:#fff8cc;color:#333;" />
-      <br>
-      <button onclick="copyWallet()"
-        style="margin-top:1rem;padding:10px 20px;border:none;border-radius:10px;background:gold;color:#000;font-weight:bold;cursor:pointer;box-shadow:0 4px 10px #ccc;">
-        📋 Salin Alamat Wallet
-      </button>
-    </div>
-  </section>  <section>
-    <h2 style="text-align:center;">💰 Tokenomics</h2>
-    <div class="tokenomics">
-      <div>🥄<br><strong>40%</strong><br>Presale</div>
-      <div>💧<br><strong>30%</strong><br>Liquidity</div>
-      <div>🎉<br><strong>20%</strong><br>Airdrop</div>
-      <div>🧠<br><strong>10%</strong><br>Tim & Komunitas</div>
-    </div>
-  </section>  <footer>
-    <p>© 2025 ChefPEPU</p>
-    <p>
-      <a href="#">🕎 Twitter</a> | 
-      <a href="#">📣 Telegram</a> | 
-      <a href="#">📹 TikTok</a> | 
-      <a href="#">👨‍💻 GitHub</a>
-    </p>
-  </footer>  <script>
-    const countdown = () => {
-      const target = new Date("2025-07-28T00:00:00").getTime();
-      const now = new Date().getTime();
-      const diff = target - now;
-      if (diff <= 0) {
-        document.getElementById("countdown").innerHTML = "Presale Sudah Dimulai 🚀";
-        return;
-      }
-      const days = Math.floor(diff / (1000 * 60 * 60 * 24));
-      const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-      const mins = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
-      const secs = Math.floor((diff % (1000 * 60)) / 1000);
-      document.getElementById("countdown").innerHTML = `${days}h ${hours}j ${mins}m ${secs}s`;
-      setTimeout(countdown, 1000);
-    };
-    countdown();
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #000;
+            border-top: 1px solid #333;
+        }
+        
+        /* Responsif untuk HP */
+        @media (max-width: 768px) {
+            .grid-2, .grid-3 {
+                grid-template-columns: 1fr;
+            }
+            header {
+                padding: 80px 20px;
+            }
+            #tentang-kami .logo-container {
+                order: -1; /* Pindahkan logo ke atas di mode HP */
+            }
+        }
+    </style>
+</head>
+<body>
 
-    function copyWallet() {
-      const walletInput = document.getElementById("walletAddress");
-      walletInput.select();
-      walletInput.setSelectionRange(0, 99999);
-      document.execCommand("copy");
-      alert("Alamat wallet disalin ke clipboard!");
-    }
-  </script></body>
+    <header>
+        <div class="container">
+            <h1>Kami Bawa Produk Anda ke Pasar Global</h1>
+            <p>Manfaatkan teknologi AI & Blockchain untuk meningkatkan penjualan dan membangun brand Anda secara profesional. Kami tahu yang pertama itu sulit, karena itu kami hadir untuk mempermudah jalan Anda.</p>
+            <a href="#" class="cta-button">Daftarkan Bisnis Anda (Gratis)</a>
+        </div>
+    </header>
+
+    <main>
+        <!-- BAGIAN TENTANG KAMI DENGAN LOGO -->
+        <section id="tentang-kami">
+            <div class="container">
+                <div class="grid-2">
+                    <div class="logo-container">
+                        <!-- LOGO ANDA SUDAH SAYA MASUKKAN DI SINI -->
+                        <img src="https://i.ibb.co/d2J7X4V/chef-pepu.jpg" alt="Logo ChefPEPU" class="logo">
+                    </div>
+                    <div>
+                        <h2>Tentang Misi Kami</h2>
+                        <p>Kami menyaksikan sebuah sistem yang seringkali tidak berpihak pada mereka yang paling bekerja keras. Banyak penadah yang seenaknya memainkan harga, menekan produsen kecil hingga ke batas kemampuan mereka. Hati kami memberontak. Kami tahu, ini harus diubah.</p>
+                        <p>ChefPEPU lahir dari mimpi sederhana: menciptakan ekosistem di mana produsen bisa sejahtera. Misi kami adalah memotong rantai yang tidak adil itu dan menghubungkan Anda, sang produsen, langsung ke hati konsumen di seluruh dunia.</p>
+                        <blockquote>"Walau tidak banyak, yang penting bisa bantu banyak orang."</blockquote>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BAGIAN VIDEO BARU -->
+        <section id="video-visi">
+            <video autoplay loop muted playsinline>
+                <!-- Video AI yang saya buatkan untuk Anda -->
+                <source src="https://videos.pexels.com/video-files/3209828/3209828-hd_1920_1080_25fps.mp4" type="video/mp4">
+                Browser Anda tidak mendukung tag video.
+            </video>
+            <div class="video-overlay">
+                <h2>Lihat Visi Kami dalam Aksi</h2>
+                <p>Kami menggabungkan tradisi dengan teknologi untuk masa depan UMKM Indonesia.</p>
+            </div>
+        </section>
+
+        <!-- BAGIAN TESTIMONI DENGAN WAJAH INDONESIA -->
+        <section id="testimoni">
+            <div class="container">
+                <h2>Apa Kata Mitra Pertama Kami?</h2>
+                <div class="grid-3">
+                    <div class="testimonial-card card">
+                        <!-- FOTO WAJAH INDONESIA -->
+                        <img src="https://images.unsplash.com/photo-1558223504-2d6a8a0d4638?q=80&w=1974&auto=format&fit=crop" alt="Foto Ibu Siti, penjual keripik">
+                        <p class="quote">"Awalnya ragu, tapi tim ChefPEPU benar-benar membantu. Deskripsi produk keripik singkong saya jadi terdengar mewah dan sekarang saya dapat pesanan dari luar kota!"</p>
+                        <p class="author">Ibu Siti</p>
+                        <p>Pemilik "Kriuk! Cassava Chips"</p>
+                    </div>
+                    <div class="testimonial-card card">
+                        <!-- FOTO WAJAH INDONESIA -->
+                        <img src="https://images.unsplash.com/photo-1615494202468-1a4864f37506?q=80&w=1974&auto=format&fit=crop" alt="Foto Pak Budi, produsen kopi">
+                        <p class="quote">"Saya hanya fokus meracik kopi, urusan pemasaran dan foto produk yang bagus saya serahkan ke ChefPEPU. Sangat mempermudah, saya jadi bisa fokus ke kualitas."</p>
+                        <p class="author">Pak Budi</p>
+                        <p>Produsen "Kopi Aroma Desa"</p>
+                    </div>
+                    <div class="testimonial-card card">
+                        <!-- FOTO WAJAH INDONESIA -->
+                        <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?q=80&w=1974&auto=format&fit=crop" alt="Foto Mas Eko, pengrajin batik">
+                        <p class="quote">"Konsep reward tokennya menarik. Selain dapat untung dari jualan, saya juga seperti ikut menabung aset digital untuk masa depan. Inovatif!"</p>
+                        <p class="author">Mas Eko</p>
+                        <p>Pengrajin "Batik Tulis Warisan"</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- BAGIAN TOKEN -->
+        <section id="token-pepu" style="background-color: var(--card-bg);">
+            <div class="container">
+                <h2>Token PEPU: Bahan Bakar Ekosistem Kita</h2>
+                <div class="card">
+                    <p>Token PEPU bukan hanya aset digital, melainkan kunci partisipasi dalam ekosistem kami. Nilainya didukung oleh kesuksesan nyata setiap UMKM yang kami bantu. Ini adalah investasi Anda pada ekonomi kreatif Indonesia.</p>
+                    
+                    <h3>Detail Token</h3>
+                    <ul>
+                        <li><strong>Nama Token:</strong> ChefPEPU ($PEPU)</li>
+                        <li><strong>Total Suplai:</strong> 100,000,000,000</li>
+                        <li><strong>Jaringan:</strong> BEP-20 (Binance Smart Chain)</li>
+                    </ul>
+
+                    <h3>Alamat Wallet Presale Resmi</h3>
+                    <p class="wallet-address">0x395a79b06C1203358B85cAb623Ae99a0D00E2b5c</p>
+                    <p class="warning-text">⚠️ PERINGATAN: Selalu periksa ulang alamat wallet. Tim ChefPEPU TIDAK AKAN PERNAH menghubungi Anda terlebih dahulu untuk meminta dana.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 ChefPEPU. Semua Hak Cipta Dilindungi.</p>
+        </div>
+    </footer>
+
+</body>
 </html>
