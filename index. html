@@ -1,68 +1,76 @@
-<!DOCTYPE html>
-<html lang="id">
+<!DOCTYPE html><html lang="id">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Chef Pepu - Token Rakyat</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ChefPEPU - UMKM & Token Berkelanjutan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;600&display=swap" rel="stylesheet">
   <style>
-    body {
-      background-color: #fffbe6;
-      font-family: 'Segoe UI', sans-serif;
-      text-align: center;
-      padding: 40px;
-      color: #333;
-    }
-    .container {
-      max-width: 600px;
-      margin: auto;
-    }
-    h1 {
-      color: #d4af37;
-      font-size: 2.5em;
-      margin-bottom: 10px;
-    }
-    h2 {
-      color: #444;
-      font-size: 1.3em;
-      margin-bottom: 30px;
-    }
-    .info {
-      background: #fff2b8;
-      padding: 20px;
-      border-radius: 15px;
-      box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    }
-    .info p {
-      font-size: 1.1em;
-      margin: 10px 0;
-    }
-    .footer {
-      margin-top: 40px;
-      font-size: 0.9em;
-      color: #888;
-    }
-    img.logo {
-      width: 150px;
-      border-radius: 50%;
-      margin-bottom: 20px;
-      border: 4px solid #d4af37;
-    }
+    body { margin: 0; font-family: 'Poppins', sans-serif; background: #fff; color: #333; }
+    header, footer { background-color: #ff6347; color: white; text-align: center; padding: 1rem; }
+    .hero { text-align: center; padding: 4rem 2rem; background: linear-gradient(to right, #ff826e, #ffb199); }
+    .hero h1 { font-size: 2.5rem; margin-bottom: 1rem; }
+    .hero p { font-size: 1.2rem; }
+    .section { padding: 2rem; max-width: 1200px; margin: auto; }
+    .produk-container { display: flex; flex-wrap: wrap; gap: 2rem; justify-content: center; }
+    .produk { background: #f9f9f9; border-radius: 12px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); width: 250px; padding: 1rem; text-align: center; }
+    .produk img { max-width: 100%; border-radius: 8px; }
+    .produk h3 { margin: 0.5rem 0; font-size: 1.2rem; }
+    .produk p { font-size: 0.95rem; margin: 0.2rem 0; }
+    .testimoni { background: #f1f1f1; padding: 2rem; border-radius: 12px; margin-top: 2rem; }
+    .token { background: #fffbe6; padding: 2rem; border-radius: 12px; margin-top: 2rem; border: 1px solid #ffd966; }
+    .cta { background: #ff6347; color: white; padding: 2rem; border-radius: 12px; text-align: center; margin-top: 2rem; }
+    a { color: #fff; text-decoration: underline; }
   </style>
 </head>
 <body>
-  <div class="container">
-    <img src="https://i.ibb.co/9qWL9fB/chefpepu-gold.png" alt="Chef Pepu" class="logo">
-    <h1>Chef PEPU</h1>
-    <h2>"Token Rakyat yang Siap Masak di Blockchain!"</h2>
-    <div class="info">
-      <p><strong>Presale:</strong> 28 Juli 2025</p>
-      <p><strong>Total Supply:</strong> 99,900,000 CHEF</p>
-      <p><strong>Blockchain:</strong> Ethereum</p>
-      <p><strong>Token Tipe:</strong> Meme + Utility</p>
+  <header>
+    <h1>ChefPEPU</h1>
+    <p>Bantu UMKM Go Digital dan Berkembang Bersama</p>
+  </header>  <div class="hero">
+    <h1>Bangkitkan UMKM Lewat Platform Modern</h1>
+    <p>Gabung dan jualan dengan cara mudah, dibantu tim ChefPEPU. Cuan bareng, berkembang bareng!</p>
+  </div>  <section class="section">
+    <h2>Produk UMKM Unggulan</h2>
+    <div class="produk-container">
+      <div class="produk">
+        <img src="https://i.imgur.com/8qZwC2Y.jpg" alt="Sambal Warisan Ibu">
+        <h3>Sambal Warisan Ibu</h3>
+        <p>Harga: Rp 25.000</p>
+        <p>Pedas, gurih, penuh rempah khas kampung.</p>
+      </div>
+      <div class="produk">
+        <img src="https://i.imgur.com/1V3Yb3R.jpg" alt="Keripik Pisang Manis">
+        <h3>Keripik Pisang Manis</h3>
+        <p>Harga: Rp 15.000</p>
+        <p>Manis alami, kriuk tahan lama!</p>
+      </div>
+      <div class="produk">
+        <img src="https://i.imgur.com/EWwMZzJ.jpg" alt="Kopi Lokal Pagi">
+        <h3>Kopi Lokal Pagi</h3>
+        <p>Harga: Rp 35.000</p>
+        <p>Aroma kuat, rasa khas pegunungan.</p>
+      </div>
     </div>
-    <div class="footer">
-      &copy; 2025 ChefPepu. Dibuat dengan hati & rasa peduli.
-    </div>
-  </div>
+  </section>  <section class="section testimoni">
+    <h2>Testimoni UMKM</h2>
+    <p>"Awalnya saya cuma jualan di rumah, sekarang orderan datang dari mana-mana karena ChefPEPU!" - Mbak Rina, Penjual Sambal</p>
+    <p>"Bantu banget! Gak paham teknologi tapi sekarang bisa jualan online. Gak ribet!" - Pak Doni, Pengusaha Kopi</p>
+  </section>  <section class="section token">
+    <h2>Tentang Token ChefPEPU</h2>
+    <p><strong>CHEF</strong> adalah token berbasis komunitas yang digunakan untuk reward dan pengembangan ekosistem UMKM.</p>
+    <ul>
+      <li>✅ Digunakan untuk cashback dan promo di platform ChefPEPU</li>
+      <li>✅ Sistem reward untuk UMKM aktif dan pelanggan loyal</li>
+      <li>✅ Transparan dan berkelanjutan (liquidity lock & vesting)</li>
+      <li>✅ Bisa dikembangkan menjadi voting dan funding UMKM</li>
+    </ul>
+    <p>Token ini bukan hanya alat cuan, tapi alat perubahan.</p>
+  </section>  <section class="section cta">
+    <h2>Gabung Sekarang!</h2>
+    <p>Daftarkan produkmu, biar kami bantu pasarkan. Gratis & tanpa ribet!</p>
+    <p><a href="https://www.tiktok.com/@chefpepu" target="_blank">TikTok ChefPEPU</a> | <a href="https://www.instagram.com/chefpepu" target="_blank">Instagram</a> | <a href="https://www.facebook.com/share/176R3C54J7/" target="_blank">Facebook</a></p>
+  </section>  <footer>
+    <p>&copy; 2025 ChefPEPU. Bangkitkan UMKM Indonesia.</p>
+  </footer>
 </body>
 </html>
