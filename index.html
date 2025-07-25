@@ -1,122 +1,148 @@
-<!DOCTYPE html><html lang="id">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>ChefPEPU - Token Rakyat</title>
-  <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
+<!DOCTYPE html><html lang="id"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ChefPEPU - Platform UMKM & Token Berkelanjutan</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
   <style>
     body {
+      font-family: 'Poppins', sans-serif;
       margin: 0;
-      font-family: 'Fredoka One', cursive;
-      background: linear-gradient(135deg, #fffbe6, #fff9c4);
-      background-attachment: fixed;
+      padding: 0;
+      background: #f7f7f7;
       color: #333;
-    }
-    header {
-      background: radial-gradient(circle, #ffd700, gold, #f5b700);
-      text-align: center;
-      padding: 2rem 1rem;
-      color: #fff;
-      text-shadow: 1px 1px 4px #00000044;
-    }
-    header h1 {
-      font-size: 3rem;
-      margin: 0;
-    }
-    header p {
-      font-size: 1.2rem;
-      margin-top: 0.5rem;
-    }
-    .hero {
-      text-align: center;
-      padding: 3rem 1rem;
-    }
-    .hero img {
-      width: 200px;
-      border-radius: 20px;
-      border: 5px solid gold;
-      box-shadow: 0 0 30px gold;
-    }
-    .hero h2 {
-      font-size: 2rem;
-      margin-top: 1.5rem;
-    }
-    .buttons {
-      margin-top: 2rem;
-    }
-    .buttons a {
-      display: inline-block;
-      margin: 0.5rem;
-      padding: 1rem 1.5rem;
-      background: linear-gradient(45deg, gold, #ffcc00);
-      color: #000;
-      text-decoration: none;
-      border-radius: 10px;
-      font-size: 1rem;
-      box-shadow: 0 4px 10px #ffc107;
-      transition: 0.3s;
-    }
-    .buttons a:hover {
-      transform: scale(1.05);
-      background: linear-gradient(45deg, #ffcc00, gold);
-    }
-    section {
-      padding: 2rem 1rem;
-      max-width: 900px;
-      margin: 0 auto;
-    }
-    .tokenomics, .roadmap {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 1rem;
-      justify-content: center;
-    }
-    .tokenomics div, .roadmap div {
-      background: #fff8cc;
-      border: 2px dashed gold;
-      padding: 1rem;
-      border-radius: 12px;
-      width: 160px;
-      text-align: center;
-      box-shadow: 0 2px 8px #eee;
-    }
-    footer {
-      background: #333;
-      color: white;
-      text-align: center;
-      padding: 1.5rem 1rem;
-      margin-top: 3rem;
-    }
-    footer a {
-      color: gold;
-      margin: 0 0.5rem;
-      text-decoration: none;
-    }
+    }header {
+  background: #ff6347;
+  color: white;
+  padding: 1rem 2rem;
+  text-align: center;
+}
+
+.hero {
+  padding: 2rem;
+  text-align: center;
+  background: white;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+
+.cta {
+  background: #ff6347;
+  color: white;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.section {
+  padding: 2rem;
+  background: white;
+  margin-top: 1rem;
+}
+
+.produk-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.produk {
+  width: 280px;
+  background: #fff;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  transition: transform 0.2s;
+}
+
+.produk:hover {
+  transform: scale(1.02);
+}
+
+.produk img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+.produk h3 {
+  margin-top: 0.5rem;
+}
+
+.produk p {
+  font-size: 0.9rem;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+  .produk-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .produk {
+    width: 90%;
+  }
+
+  .hero h1 {
+    font-size: 1.5rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+}
+
   </style>
-</head>
-<body>
+</head><body>
   <header>
-    <h1>👨‍🍳 Chef PEPU</h1>
-    <p>Token Rakyat dari Warung ke Blockchain 🚀</p>
-  </header>  <div class="hero">
-    <img src="https://romadhoni1802.github.io/chefpepu-website/chef-pepu.png" alt="ChefPEPU Mascot" />
-    <h2>“Token Rakyat yang Siap Masak di Blockchain!”</h2>
-    <div class="buttons">
-      <a href="#presale">🍛 Join Presale</a>
-      <a href="#">📊 View Chart</a>
-      <a href="#">🏱 Claim Airdrop</a>
+    <h1>ChefPEPU</h1>
+    <p>Platform UMKM Berkelanjutan + Token Utility</p>
+  </header>  <section class="hero">
+    <h1>Bantu UMKM, Dapat Reward</h1>
+    <p>ChefPEPU hadir untuk bantu produk lokal dan UMKM naik kelas lewat platform digital dan token utility.</p>
+    <a href="#produk" class="cta">Lihat Produk</a>
+  </section>  <section id="produk" class="section">
+    <h2 style="text-align: center;">Produk Unggulan</h2>
+    <div class="produk-container">
+      <div class="produk">
+        <img src="https://i.imgur.com/8qZwC2Y.jpg" alt="Sambal Warisan Ibu dalam botol modern">
+        <h3>Sambal Warisan Ibu</h3>
+        <p>Rp25.000 - Pedas khas, tanpa bahan pengawet. Laris 1000+ pcs per bulan!</p>
+      </div>
+      <div class="produk">
+        <img src="https://i.imgur.com/QCGiPtv.jpg" alt="Bumbu Nasi Goreng Rempah Kering">
+        <h3>Bumbu Nasi Goreng</h3>
+        <p>Rp15.000 - Bumbu rahasia dari warung legendaris. UMKM siap jual ulang!</p>
+      </div>
     </div>
-  </div>  <section>
-    <h2 style="text-align:center;">Tentang ChefPEPU</h2>
-    <p style="text-align:center;">
-      ChefPEPU lahir dari dapur legendaris kampung. Bukan sekadar nasi goreng, ini revolusi blockchain!  
-      Dari wajan ke wallet — kita goreng bareng! 🔥
-    </p>
-  </section>  <section>
-    <h2>👨‍🍳 Tim & Misi ChefPEPU</h2>
-    <p>
-      ChefPEPU bukan sekadar token — ini adalah gerakan dari dapur rakyat untuk membawa rasa lokal ke dunia global. 
-      Didirikan oleh warung sederhana yang tumbuh besar di tengah wajan panas dan resep warisan ibu.
+  </section>  <section class="section">
+    <h2 style="text-align: center;">Testimoni</h2>
+    <p style="text-align: center; max-width: 600px; margin: auto;">"Awalnya saya cuma jualan offline, setelah dibantu tim ChefPEPU, sekarang produk saya sudah tembus Shopee & TikTok Shop!" - Bu Narti, Penjual Bumbu</p>
+  </section>  <section class="section">
+    <h2 style="text-align: center;">Tentang Token ChefPEPU</h2>
+    <p style="max-width: 700px; margin: auto;">Token ChefPEPU adalah token utility berbasis komunitas yang digunakan untuk reward, voting pengembangan UMKM, hingga akses layanan premium di platform ChefPEPU. Kami memiliki sistem <strong>liquidity lock</strong>, <strong>vesting terjadwal</strong>, dan <strong>pembagian reward untuk holder</strong>. Fokus kami bukan hanya cuan, tapi memberi manfaat nyata bagi UMKM dan komunitas. Info lengkap akan tersedia di halaman token resmi.</p>
+  </section>  <footer>
+    <p>© 2025 ChefPEPU. Platform untuk UMKM Maju dan Tumbuh Bersama.</p>
+  </footer>
+</body></html>
     </p>
     <p>
       Berbekal semangat dan pengalaman dari dapur kecil, ChefPEPU hadir untuk menyuarakan transparansi, kejujuran, dan cita rasa Indonesia di dunia blockchain. 
